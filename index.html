@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>t9t.io</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <!-- Bulma Version 0.7.2-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+  <!-- <link href="https://unpkg.com/bulma-fluent@0.3.13/css/bulma.min.css" rel="stylesheet"> -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <script async type="text/javascript" src="./index.js"></script>
+
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav class="navbar is-link is-fixed-top">
+    <div class="navbar-brand">
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#about">
+          <span class="icon">
+            <i class="fas fa-info"></i>
+          </span>
+          <span>About</span>
+        </a>
+        <a class="navbar-item" href="#portfolio">
+          <span class="icon">
+            <i class="fas fa-th-list"></i>
+          </span>
+          <span>Portfolio</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero is-link is-fullheight is-fullheight-with-navbar">
+    <div class="hero-body">
+      <div class="container"> At
+        <h1 class="title is-1">
+          t9t.io
+        </h1>
+        <h2 class="subtitle is-3">
+          We build <span id="typedEl"></span>startups
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <!-- Title -->
+    <div class="section-heading">
+      <h3 class="title is-2">About t9t.io</h3>
+      <h4 class="subtitle is-5">t9t is short for transparent</h4>
+      <div class="container">
+        <p>By "transparent", we mean <strong>open source all the code</strong>; <strong>open metrics of the startup</strong>; <strong> show our revenues.</strong></p>
+        <p>In short, our users know every thing we know about out startup expect some sensitive info like db/card password.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-heading">
+        <h3 class="title is-2">Portfolio</h3>
+        <h4 class="subtitle is-5">Latest works</h4>
+      </div>
+      <br>
+
+      <div class="container portfolio-container">
+        <div class="columns">
+          <div class="column is-4">
+            <!-- tools -->
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span>CloudQuery</span>
+                </p>
+              </header>
+              <div class="card-content">
+                <figure class="image">
+                  <img src="https://user-images.githubusercontent.com/5512552/51655619-6b978580-1fd8-11e9-93a9-9accf8e25e54.gif" alt="CloudQuery screenshot">
+                </figure>
+              </div>
+              <footer class="card-footer">
+                <a href="https://2uvlp0y13b.execute-api.us-west-2.amazonaws.com/staging/" class="card-footer-item">Preview</a>
+                <a href="https://github.com/t9t-io/cloudquery" class="card-footer-item">Source
+                  Code</a>
+              </footer>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" style="background-color:white">
+      <div class="container">
+        <hr style="background-color:#dbdbdb; height: 1px"/>
+        <div style="float:left">
+        Build with <i class="far fa-heart"></i>  by  <a href="https://twitter.com/tim_qian"> Tim Qian</a>
+        </div>
+        <div style="float: right">
+          <a class="icon button is-white" href="https://join.slack.com/t/cloudfetch/shared_invite/enQtNTA5NzIyNTU2Mzc1LTIwNzZiODZkNzFiODY0NTM4OWViYjgxN2JkNGY0NzJiYWQzNTcwYzM3NjMwMmE2N2RkMzE0ZGRlYWJkYTY3Yzg"><i class="fab fa-slack"></i></a>
+          <a class="icon button is-white" href="https://user-images.githubusercontent.com/5512552/40399903-53d1ebde-5e72-11e8-98d8-615fc40c09f1.jpeg"><i class="fab fa-weixin"></i></a>
+          <a class="icon button is-white" href="mailto:timqian92@qq.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>
