@@ -10,3 +10,7 @@ buttons:
 
 marketing:
 PR: https://github.com/mattboldt/typed.js/
+
+## Thanks
+
+- bulma templates: https://dansup.github.io/bulma-templates/
