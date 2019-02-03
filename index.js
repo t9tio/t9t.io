@@ -10,7 +10,7 @@
 
     // typed.js
     var options = {
-      strings: ["transparent", "t9t"],
+      strings: ["t9t^700", "transparent"],
       typeSpeed: 60,
       backSpeed: 30
     }
