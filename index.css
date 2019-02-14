@@ -1,3 +1,19 @@
+.has-bg-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.72)), url(./header2.jpeg);
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scaleX(-1);
+}
+
+.has-bg-img > * {
+  transform: scaleX(-1); 
+}
+
+#nav {
+  background-color: rgba(0,0,0,1);
+}
+
 .has-same-height .card {
     height: 320px;
     overflow: hidden;
