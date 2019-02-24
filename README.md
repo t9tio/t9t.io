@@ -1,7 +1,6 @@
-# t9t.io
+# [t9t.io](http://t9t.io)
 
-## TODO
-
+Home page of http://t9t.io
 ### marketing
 
 - PR: https://github.com/mattboldt/typed.js/
