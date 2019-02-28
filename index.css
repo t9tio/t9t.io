@@ -1,5 +1,5 @@
 .has-bg-img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.72)), url(./header2.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.72)), url(https://raw.githubusercontent.com/timqian/images/master/header2.jpeg);
   background-position: 50% 0%;
   background-repeat: no-repeat;
   background-size: cover;

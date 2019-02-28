@@ -1,0 +1,14 @@
+{
+  "name": "t9tio",
+  "profile": "timConsole",
+  "regions": ["us-east-1"],
+  "type": "static",
+  "stages": {
+    "production": {
+      "domain": "t9t.io"
+    },
+    "staging": {
+      "domain": "stage.t9t.io"
+    }
+  }
+}
