@@ -56,3 +56,13 @@
     margin-top: 1em;
     margin-bottom: 6em;
   }
+
+  /* aline cards: https://github.com/jgthms/bulma/issues/218#issuecomment-301706143 */
+  .bm--card-equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+ }
+ .bm--card-equal-height .card-footer {
+    margin-top: auto;
+ }
