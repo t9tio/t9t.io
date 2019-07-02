@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-> This checklist is borrowed from [startup idea checklist by defmacro](https://www.defmacro.org/2019/03/26/startup-checklist.html). To submit a new startup idea, please at least fill in the first 5 questions.
+> This checklist is borrowed from [startup idea checklist](https://www.defmacro.org/2019/03/26/startup-checklist.html) by @coffeemug. To submit a new startup idea, please at least fill in the first 5 questions.
 
 ## Product
 
