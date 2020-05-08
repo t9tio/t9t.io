@@ -1,314 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="At t9t.io, we build transparent products together"/>
-    <!-- ref: https://stackoverflow.com/a/26960753/4674834 -->
-    <meta name="theme-color" content="#000" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta name="description" content="Building transparent products"/>
+    <link rel="icon" href="https://t9t.io/favicon.ico" />
     <title>t9t.io</title>
-    <link rel="icon" href="./favicon.ico" />
-    <link rel="apple-touch-icon" href="./favicon.ico" />
-    <link rel="bookmark" href="./favicon.ico" />
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-      crossorigin="anonymous"
-      />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
-      rel="stylesheet"
-      />
-    <!-- Bulma Version 0.7.2-->
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
-      />
-    <!-- <link href="https://unpkg.com/bulma-fluent@0.3.13/css/bulma.min.css" rel="stylesheet"> -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    <script async type="text/javascript" src="./index.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-56506279-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-56506279-2');
-    </script>
-
+      href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+    />
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-56506279-2"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+  
+        gtag('config', 'UA-56506279-2');
+      </script>
+    </head>
+  
   </head>
 
+  
   <body>
-    <!-- Navigation bar -->
-    <nav class="navbar is-black is-fixed-top" id="nav">
+    
+    <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">
-          <div
-            class="navbar-burger burger"
-            data-target="navbarExampleTransparentExample">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          
+          
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item" href="#about">
-              <span>#About</span>
-            </a>
-
-            <a class="navbar-item" href="#portfolio">
-              <span>#Works</span>
-            </a>
-
-            <a class="navbar-item" href="#contact">
-              <span>#Contact</span>
-            </a>
-
-            <a class="navbar-item" href="https://blog.t9t.io">
-              <strong>Blogs</strong>
-              <span class="icon">
-                <i class="far fa-share-square"></i>
-              </span>
-            </a>
+        <div class="navbar-menu" id="nav-menu">
+          <div class="navbar-end"> 
+            
+    <a class="navbar-item" href="#products">
+      <strong>Products</strong>
+    </a>
+  
+    <a class="navbar-item" href="https://blog.t9t.io">
+      <strong>Blog</strong>
+    </a>
+  
+    <a class="navbar-item" href="#contact">
+      <strong>Contact</strong>
+    </a>
+    <a class="navbar-item" href="https://github.com/timqian">
+      <strong>GitHub</strong>
+    </a>
           </div>
         </div>
       </div>
     </nav>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
 
-    <!-- Header -->
-    <section class="hero is-dark is-fullheight has-bg-img">
-      <div class="hero-body">
-        <div class="container">
-          At
-          <h1 class="title is-1">
-            t9t.io
-          </h1>
-          <h2 class="subtitle is-4">
-            We build <strong><span id="typedEl"></span></strong>products
-          </h2>
-        </div>
-      </div>
-      <div class="hero-foot">
-        <div class="container">
-          <div class="content has-text-centered">
-            <svg
-              width="35"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                fill="#ffffff"
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="container">
-      <!-- Title -->
-      <div class="section-heading">
-        <h3 class="title is-2">About t9t.io</h3>
-        <h4 class="subtitle is-6">t9t is short for transparent</h4>
-      <!-- </div> -->
-          <p class="subtitle is-5">
-            By "transparent", we mean <strong>open source</strong> the code and share the <strong>metrics</strong> data of projects
-          </p>
-          <p class="subtitle is-5">
-            We believe the more transparent a product is, the more trust we get from user and longer the product lives
-          </p>
-        </div>
-        </div>
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
       
-    </section>
-
-    <!-- Portfolio -->
-    <section class="section" id="portfolio">
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+      
+          // Add a click event on each of them
+          $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+      
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+      
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+      
+            });
+          });
+        }
+      
+      });
+    </script>
+  <section class="hero is-dark is-fullheight" 
+  style="
+    background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.72)), url(https://raw.githubusercontent.com/timqian/images/master/header2.jpeg);
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    ">
+    <div class="hero-body">
       <div class="container">
-        <div class="section-heading">
-          <h3 class="title is-2">Works</h3>
-          <h4 class="subtitle is-6">Latest products</h4>
-        </div>
-        <br />
+        At
+        <h1 class="title is-1">
+          t9t.io
+        </h1>
+        <h2 class="subtitle is-4">
+          We build <span class="typedEl">transparent</span> products
+        </h2>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+        <script>
+          var options = {
+            strings: ["t9t", "transparent"],
+            typeSpeed: 50,
+            fadeOut: true,
+            loop: true,
+            loopCount: 2,
+            showCursor: false,
+          }
 
-        <div class="container portfolio-container">
-          <div class="row columns is-multiline">
-            <div class="column is-one-third">
-              <div class="card large bm--card-equal-height">
-                <div class="card-image">
-                  <figure class="image">
-                    <img
-                      src="https://raw.githubusercontent.com/timqian/images/master/tomatopie.gif"
-                      alt="tomato-pie screenshot"
-                      />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <p class="title is-4 no-padding">TomatoPie</p>
-                  <p class="subtitle is-6">A new UI for Pomodoro Technique</p>
-                  <p>
-                    <iframe
-                      style="display:block"
-                      src="https://ghbtns.com/github-btn.html?user=t9tio&repo=tomato-pie&type=star&count=true"
-                      frameborder="0"
-                      scrolling="0"
-                      height="20px"
-                      width="170px"></iframe>
-                  </p>
-                </div>
-                <footer class="card-footer">
-                  <a
-                    href="https://chrome.google.com/webstore/detail/gffgechdocgfajkbpinmjjjlkjfjampi"
-                    class="card-footer-item">Preview</a>
-                  <a
-                    href="https://github.com/t9tio/tomato-pie"
-                    class="card-footer-item">Source Code</a>
-                </footer>
-              </div>
-            </div>
-
-            <div class="column is-one-third">
-              <div class="card large bm--card-equal-height">
-                <div class="card-image">
-                  <figure class="image">
-                    <img
-                      src="https://user-images.githubusercontent.com/5512552/51655619-6b978580-1fd8-11e9-93a9-9accf8e25e54.gif"
-                      alt="CloudQuery screenshot"
-                      />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <p class="title is-4 no-padding">
-                    CloudQuery
-                  </p>
-
-                  <p class="subtitle is-6">Turn any website to serverless API</p>
-                  <p>
-                    <iframe
-                      style="display:block"
-                      src="https://ghbtns.com/github-btn.html?user=t9tio&repo=cloudquery&type=star&count=true"
-                      frameborder="0"
-                      scrolling="0"
-                      height="20px"
-                      width="170px"></iframe>
-                  </p>
-                </div>
-                <footer class="card-footer">
-                  <a
-                    href="https://cloudquery.t9t.io/"
-                    class="card-footer-item">Preview</a>
-                  <a
-                    href="https://github.com/t9tio/cloudquery"
-                    class="card-footer-item">Source Code</a>
-                </footer>
-              </div>
-            </div>
-
-            <div class="column is-one-third">
-              <div class="card large bm--card-equal-height">
-                <div class="card-image">
-                  <figure class="image">
-                    <!--Note: img ratio should be around 1.6-->
-                    <img
-                      src="https://raw.githubusercontent.com/timqian/images/master/star-history.gif"
-                      alt="star-history screenshot"
-                      />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <p class="title is-4 no-padding">
-                    Star History
-                  </p>
-
-                  <p class="subtitle is-6">Star history graph of github repos</p>
-                  <p>
-                    <iframe
-                      style="display:block"
-                      src="https://ghbtns.com/github-btn.html?user=timqian&repo=star-history&type=star&count=true"
-                      frameborder="0"
-                      scrolling="0"
-                      height="20px"
-                      width="170px"></iframe>
-                  </p>
-                </div>
-                <footer class="card-footer">
-                  <a
-                    href="https://star-history.t9t.io"
-                    class="card-footer-item">Preview</a>
-                  <a
-                    href="https://github.com/timqian/star-history"
-                    class="card-footer-item">Source Code</a>
-                </footer>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
+          var typed = new Typed(".typedEl", options);
+        </script>
       </div>
-    </section>
-
-
-    <section class="section" id="contact">
+    </div>
+    <div class="hero-foot">
       <div class="container">
-        <div class="section-heading">
-          <h3 class="title is-2">Contact</h3>
-          <h4 class="subtitle is-6">Get in touch</h4>
+        <div class="content has-text-centered">
+          <svg
+            width="45"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              class="arrow"
+              fill="#ffffff"
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path>
+          </svg>
         </div>
-        <p class="subtitle is-5">
-            Join the community on <strong><a href="https://spectrum.chat/t9tio">spectrum</a></strong> or <strong><a href="https://raw.githubusercontent.com/timqian/images/master/3811553342733_.pic.jpg">wechat</a></strong>
-        </p>
-        <p class="subtitle is-5">
-            Follow us on <strong><a href="https://github.com/timqian">github</a></strong> or <strong><a href="https://twitter.com/t9tio">twitter</a></strong>
-        </p>
-        <p class="subtitle is-5">
-            Got a product idea and need help building your MVP? <strong><a href="mailto:timqian92@qq.com"> Email me </a></strong>
-        </p>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <!-- Footer -->
-      <footer class="footer" style="background-color:white">
-        <div class="container">
-          <hr style="background-color:#dbdbdb; height: 1px" />
-          <div style="float:left">
-            Build by
-            <a href="https://twitter.com/tim_qian"><span class="tag is-info is-rounded"><strong>@tim_qian</strong></span></a>
+  <div class="hero" style="background-color:white;" id="products">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5" >
+            <p class="title is-6" style="color: white; filter: invert(100%);"> FEEDS.PUB </p>
+            <p class="sub-title is-6 " style="color: white; filter: invert(100%);"> An RSS aggregator and network </p>
+            <br/>
+            <a class="button " href="https://feeds.pub">View Product</a>
           </div>
-          <div style="float: right">
-
-            <a
-              class="icon button is-white"
-              href="https://spectrum.chat/t9tio">
-              <i><svg viewBox="0 0 16 16" width="15" height="15"><g fill="#111111"><path d="M0,1.067A1.067,1.067,0,0,1,1.067,0H2A14,14,0,0,1,16,14v.933A1.067,1.067,0,0,1,14.933,16H9.067A1.067,1.067,0,0,1,8,14.933V14A6,6,0,0,0,2,8H1.067A1.067,1.067,0,0,1,0,6.933Z" fill="#111111"></path></g></svg></i>
+          <div class="column has-text-centered">
+            <a href="https://feeds.pub">
+              <img src="https://timqian-imgs.s3.ap-southeast-1.amazonaws.com/2020-03-Group%202.png" alt="wewe" style="max-height:20rem; border-radius: 5px; box-shadow: 0px 0px 10px rgba(10,10,10,.1); "/>
             </a>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
 
-            <a
-              class="icon button is-white"
-              href="https://twitter.com/t9tio"><i class="fab fa-twitter"></i>
+  <div class="hero" style="background-color:black;" id="products">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5" >
+            <p class="title is-6" style="color: black; filter: invert(100%);"> CHART.XKCD </p>
+            <p class="sub-title is-6 " style="color: black; filter: invert(100%);">XKCD styled chart lib</p>
+            <br/>
+            <a class="button is-white is-outlined" href="https://github.com/timqian/chart.xkcd">View Product</a>
+            <a class="button is-white is-outlined" href="https://github.com/timqian/chart.xkcd">Source Code</a>
+          </div>
+          <div class="column has-text-centered">
+            <a href="https://github.com/timqian/chart.xkcd">
+              <img src="https://timqian-imgs.s3.ap-southeast-1.amazonaws.com/2020-05-6c544000-1463-11ea-8070-b57a927ca222.png" alt="open source jobs" style="max-height:20rem; border-radius: 5px; box-shadow: 0px 0px 10px rgba(10,10,10,.1); "/>
             </a>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
 
-            <a
-            class="icon button is-white"
-            href="https://raw.githubusercontent.com/timqian/images/master/3811553342733_.pic.jpg">
+  <div class="hero" style="background-color:white;" id="products">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5" >
+            <p class="title is-6" style="color: white; filter: invert(100%);"> WEWE </p>
+            <p class="sub-title is-6 " style="color: white; filter: invert(100%);"> Open wechat, slack... group chats to the world, Bring valuable discusions to the open internet. </p>
+            <br/>
+            <a class="button " href="https://wewe.t9t.io">View Product</a>
+            <a class="button " href="https://github.com/t9tio/wewe">Source Code</a>
+          </div>
+          <div class="column has-text-centered">
+            <a href="https://wewe.t9t.io">
+              <img src="https://raw.githubusercontent.com/timqian/images/master/20190731123807.png" alt="wewe" style="max-height:20rem; border-radius: 5px; box-shadow: 0px 0px 10px rgba(10,10,10,.1); "/>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="hero" style="background-color:black;" id="products">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5" >
+            <p class="title is-6" style="color: black; filter: invert(100%);"> OPEN SOURCE JOBS </p>
+            <p class="sub-title is-6 " style="color: black; filter: invert(100%);"> A list of Open Source projects offering jobs. </p>
+            <br/>
+            <a class="button is-white is-outlined" href="https://oo.t9t.io/organizations">View Product</a>
+            <a class="button is-white is-outlined" href="https://github.com/t9tio/open-source-jobs">Source Code</a>
+          </div>
+          <div class="column has-text-centered">
+            <a href="https://oo.t9t.io/organizations">
+              <img src="https://raw.githubusercontent.com/timqian/images/master/20190731094157.png" alt="open source jobs" style="max-height:20rem; border-radius: 5px; box-shadow: 0px 0px 10px rgba(10,10,10,.1); "/>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+  <div class="hero" style="background-color:white;" id="products">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5" >
+            <p class="title is-6" style="color: white; filter: invert(100%);"> TOMATO PIE </p>
+            <p class="sub-title is-6 " style="color: white; filter: invert(100%);"> A new UI for Pomodoro Technique. Schedule your time directly with a clock. </p>
+            <br/>
+            <a class="button " href="https://chrome.google.com/webstore/detail/gffgechdocgfajkbpinmjjjlkjfjampi">View Product</a>
+            <a class="button " href="https://github.com/t9tio/tomato-pie">Source Code</a>
+          </div>
+          <div class="column has-text-centered">
+            <a href="https://chrome.google.com/webstore/detail/gffgechdocgfajkbpinmjjjlkjfjampi">
+              <img src="https://raw.githubusercontent.com/timqian/images/master/20190731094159.png" alt="tomato pie" style="max-height:20rem; border-radius: 5px; box-shadow: 0px 0px 10px rgba(10,10,10,.1); "/>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="hero" style="background-color:black;" id="products">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5" >
+            <p class="title is-6" style="color: black; filter: invert(100%);"> CLOUD QUERY </p>
+            <p class="sub-title is-6 " style="color: black; filter: invert(100%);"> Turn any website to API by serveral clicks </p>
+            <br/>
+            <a class="button is-white is-outlined" href="https://cloudquery.t9t.io/">View Product</a>
+            <a class="button is-white is-outlined" href="https://github.com/t9tio/cloudquery">Source Code</a>
+          </div>
+          <div class="column has-text-centered">
+            <a href="https://cloudquery.t9t.io/">
+              <img src="https://raw.githubusercontent.com/timqian/images/master/20190731094200.png" alt="cloudquery" style="max-height:20rem; border-radius: 5px; box-shadow: 0px 0px 10px rgba(10,10,10,.1); "/>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="hero" style="background-color:white;" id="products">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5" >
+            <p class="title is-6" style="color: white; filter: invert(100%);"> STAR HISTORY </p>
+            <p class="sub-title is-6 " style="color: white; filter: invert(100%);"> The missing star history graph of github repos </p>
+            <br/>
+            <a class="button " href="https://star-history.t9t.io">View Product</a>
+            <a class="button " href="https://github.com/timqian/star-history">Source Code</a>
+          </div>
+          <div class="column has-text-centered">
+            <a href="https://star-history.t9t.io">
+              <img src="https://raw.githubusercontent.com/timqian/images/master/20190731094158.png" alt="star history" style="max-height:20rem; border-radius: 5px; box-shadow: 0px 0px 10px rgba(10,10,10,.1); "/>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+
+    <footer class="footer" style="background-color:white;" id="contact">
+      <div class="container">
+        <hr/>
+
+        <div style="float:left;">
+          Bulid with ❤ by <a href="https://timqian.com">timqian</a>.
+        </div>
+
+        <div style="float: right;">
+          <a class="icon button is-white" href="https://github.com/timqian">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="icon button is-white" href="https://twitter.com/tim_qian">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a class="icon button is-white" href="https://raw.githubusercontent.com/timqian/images/master/3811553342733_.pic.jpg">
             <i class="fab fa-weixin"></i>
-            </a>
-
-            <a class="icon button is-white" href="mailto:timqian92@qq.com">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
+          </a>
+          <a class="icon button is-white" href="mailto:timqian92@qq.com">
+            <i class="fas fa-envelope"></i>
+          </a>
         </div>
-      </footer>
-    </body>
-  </html>
+      </div>
+    </footer>
+  <body>
+
+</html>
