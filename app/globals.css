@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+    --color-accent: #61b04b;
+    --color-accent-glow: rgba(97, 176, 75, 0.15);
+
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --animate-blink: blink 1s step-end infinite;
+    --animate-fade-up: fadeUp 0.8s ease forwards;
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Custom utilities that are hard to map 1:1 or for global styles */
+body {
+    @apply font-sans bg-white text-gray-900 min-h-screen antialiased;
+    background-image:
+        radial-gradient(circle at 10% 10%, rgba(97, 176, 75, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(97, 176, 75, 0.03) 0%, transparent 40%);
+}
