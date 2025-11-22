@@ -65,7 +65,7 @@ export default function HomeContent({ lang }) {
 
                 <section id="projects" className="mb-40 opacity-0 translate-y-5 animate-fade-up [animation-delay:0.4s] scroll-mt-24">
                     <h2 className="text-2xl font-semibold mb-12 tracking-[-0.02em] text-gray-900 flex items-center gap-4 after:content-[''] after:h-px after:flex-1 after:bg-gray-200">{dict.projects.title}</h2>
-                    <ul className="list-none grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-8">
+                    <ul className="list-none grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-8">
                         {dict.projects.items.map((item, index) => (
                             <li key={index} className="bg-white border border-gray-200 rounded-2xl transition-all duration-300 cubic-[0.2,0.8,0.2,1] overflow-hidden relative hover:border-accent hover:-translate-y-1 hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.08)]">
                                 <div className="p-8 h-full flex flex-col">
@@ -147,7 +147,7 @@ export default function HomeContent({ lang }) {
 
                 <footer className="mt-32 py-16 text-center border-t border-gray-200">
                     <a href="https://github.com/timqian" target="_blank" rel="noopener noreferrer" className="text-gray-500 no-underline font-mono text-sm transition-colors duration-200 hover:text-gray-900">
-                        @timqian
+                        by @timqian
                     </a>
                 </footer>
             </div>
