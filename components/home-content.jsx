@@ -68,13 +68,13 @@ export default function HomeContent({ lang }) {
                     <ul className="list-none grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-8">
                         {dict.projects.items.map((item, index) => (
                             <li key={index} className="bg-white border border-gray-200 rounded-2xl transition-all duration-300 cubic-[0.2,0.8,0.2,1] overflow-hidden relative hover:border-accent hover:-translate-y-1 hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.08)]">
-                                <div className="p-8 h-full flex flex-col">
-                                    <div className="flex justify-between items-start gap-4 mb-4">
+                                <div className="p-8 h-full">
+                                    <div className="flex justify-between items-start">
                                         <div>
                                             <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-gray-900 tracking-[-0.01em] hover:text-accent transition-colors no-underline block mb-1">
                                                 {item.name}
                                             </a>
-                                            <div className="font-mono text-xs text-accent opacity-90">{item.url}</div>
+                                            
                                         </div>
                                         {item.repo && (
                                             <div className="flex-shrink-0">
@@ -90,6 +90,7 @@ export default function HomeContent({ lang }) {
                                             </div>
                                         )}
                                     </div>
+                                    <div className="font-mono text-xs text-accent opacity-90 mb-4">{item.url}</div>
                                     <div className="text-[0.95rem] text-gray-500 leading-relaxed mt-auto">
                                         {item.desc}
                                     </div>
