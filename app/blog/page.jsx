@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
-export default function RootPage() {
+export default function BlogRedirect() {
     const router = useRouter()
 
     useEffect(() => {
@@ -11,7 +11,7 @@ export default function RootPage() {
         const browserLang = navigator.language.startsWith('zh') ? 'zh' : 'en'
         const targetLang = storedLang || browserLang
 
-        router.replace(`/${targetLang}`)
+        router.replace(`/blog/${targetLang}`)
     }, [router])
 
     return null

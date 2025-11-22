@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 
 @theme {
     --color-accent: #61b04b;
@@ -33,7 +35,12 @@
 /* Custom utilities that are hard to map 1:1 or for global styles */
 body {
     @apply font-sans bg-white text-gray-900 min-h-screen antialiased;
+    background-color: #ffffff;
     background-image:
-        radial-gradient(circle at 10% 10%, rgba(97, 176, 75, 0.03) 0%, transparent 40%),
-        radial-gradient(circle at 90% 90%, rgba(97, 176, 75, 0.03) 0%, transparent 40%);
+        radial-gradient(circle at 50% 0%, rgba(97, 176, 75, 0.08) 0%, transparent 50%),
+        linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 53px 53px, 53px 53px;
+    background-position: center top;
+    background-attachment: scroll, fixed, fixed;
 }

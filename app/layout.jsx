@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-    title: 'T9T - Transparency Experiment',
+    title: 'Transparent Startup Experiments',
     description: 'Transparent from idea -> product -> monetization',
 }
 
