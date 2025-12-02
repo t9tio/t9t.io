@@ -8,6 +8,7 @@ export default function Navbar({ lang, dict }) {
     const router = useRouter()
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
     const dropdownRef = useRef(null)
 
     const switchLanguage = (newLang) => {
@@ -27,15 +28,23 @@ export default function Navbar({ lang, dict }) {
         return () => document.removeEventListener('mousedown', handleClickOutside)
     }, [])
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     return (
-        <nav className="fixed top-0 left-0 w-full  backdrop-blur-md border-b border-black/5 z-10">
+        <nav className={`fixed top-0 left-0 w-full z-10 transition-all duration-200 ${isScrolled ? 'backdrop-blur-md bg-[#f0f7ee]/80' : ''}`}>
             <div className="max-w-[1200px] w-full mx-auto px-8 py-2.5 flex justify-between items-center">
                 <div className="flex items-center gap-8">
                     <Link href={`/${lang}`} className="flex items-center no-underline">
                         <img src="/favicon.ico" alt="T9T Logo" className="w-8 h-8 rounded-md" />
                     </Link>
                     <div className="flex gap-6 items-center">
-                        <Link href={`/${lang}#projects`} className="no-underline text-gray-500 text-sm font-medium transition-colors duration-200 hover:text-gray-900">
+                        <Link href={`/${lang}#products`} className="no-underline text-gray-500 text-sm font-medium transition-colors duration-200 hover:text-gray-900">
                             {dict.nav.projects}
                         </Link>
                         <Link href={`/blog/${lang}`} className="no-underline text-gray-500 text-sm font-medium transition-colors duration-200 hover:text-gray-900">

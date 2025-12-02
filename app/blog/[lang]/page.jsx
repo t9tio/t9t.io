@@ -33,9 +33,18 @@ export default async function BlogIndex({ params }) {
                     ))}
                 </div>
                 <div className="mt-20 pt-10 border-t border-gray-200">
-                    <Link href={`/${lang}`} className="text-accent hover:underline font-mono text-sm">
-                        ← {lang === 'zh' ? '返回首页' : 'Back to Home'}
-                    </Link>
+                    <div className="flex justify-between items-center">
+                        <Link href={`/${lang}`} className="text-accent hover:underline font-mono text-sm">
+                            ← {lang === 'zh' ? '返回首页' : 'Back to Home'}
+                        </Link>
+                        <a href={`/blog/${lang}/rss.xml`} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-accent transition-colors duration-200" aria-label="RSS Feed">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M4 11a9 9 0 0 1 9 9"></path>
+                                <path d="M4 4a16 16 0 0 1 16 16"></path>
+                                <circle cx="5" cy="19" r="1"></circle>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </>

@@ -51,8 +51,12 @@ export default function HomeContent({ lang }) {
                     </div>
                 </header>
 
-                <section className="mb-40 opacity-0 translate-y-5 animate-fade-up [animation-delay:0.2s]">
-                    <h2 className="text-2xl font-semibold mb-12 tracking-[-0.02em] text-gray-900 flex items-center gap-4 after:content-[''] after:h-px after:flex-1 after:bg-gray-200">{dict.principles.title}</h2>
+                <section id="principles" className="mb-40 opacity-0 translate-y-5 animate-fade-up [animation-delay:0.2s] scroll-mt-24">
+                    <h2 className="text-2xl font-semibold mb-12 tracking-[-0.02em] text-gray-900 flex items-center gap-4 after:content-[''] after:h-px after:flex-1 after:bg-gray-200 group">
+                        <a href="#principles" className="no-underline text-gray-900 hover:text-accent transition-colors">
+                            {dict.principles.title}
+                        </a>
+                    </h2>
                     <ul className="list-none grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
                         {dict.principles.items.map((item, index) => (
                             <li key={index} className="bg-white border border-gray-200 p-8 rounded-xl transition-all duration-300 ease-out hover:border-accent hover:bg-gray-50">
@@ -63,8 +67,12 @@ export default function HomeContent({ lang }) {
                     </ul>
                 </section>
 
-                <section id="projects" className="mb-40 opacity-0 translate-y-5 animate-fade-up [animation-delay:0.4s] scroll-mt-24">
-                    <h2 className="text-2xl font-semibold mb-12 tracking-[-0.02em] text-gray-900 flex items-center gap-4 after:content-[''] after:h-px after:flex-1 after:bg-gray-200">{dict.projects.title}</h2>
+                <section id="products" className="mb-40 opacity-0 translate-y-5 animate-fade-up [animation-delay:0.4s] scroll-mt-24">
+                    <h2 className="text-2xl font-semibold mb-12 tracking-[-0.02em] text-gray-900 flex items-center gap-4 after:content-[''] after:h-px after:flex-1 after:bg-gray-200 group">
+                        <a href="#products" className="no-underline text-gray-900 hover:text-accent transition-colors">
+                            {dict.projects.title}
+                        </a>
+                    </h2>
                     <ul className="list-none grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-8">
                         {dict.projects.items.map((item, index) => (
                             <li key={index} className="bg-white border border-gray-200 rounded-2xl transition-all duration-300 cubic-[0.2,0.8,0.2,1] overflow-hidden relative hover:border-accent hover:-translate-y-1 hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.08)]">
@@ -100,8 +108,12 @@ export default function HomeContent({ lang }) {
                     </ul>
                 </section>
 
-                <section className="mb-40 opacity-0 translate-y-5 animate-fade-up [animation-delay:0.6s]">
-                    <h2 className="text-2xl font-semibold mb-12 tracking-[-0.02em] text-gray-900 flex items-center gap-4 after:content-[''] after:h-px after:flex-1 after:bg-gray-200">{dict.partnerships.title}</h2>
+                <section id="partnerships" className="mb-40 opacity-0 translate-y-5 animate-fade-up [animation-delay:0.6s] scroll-mt-24">
+                    <h2 className="text-2xl font-semibold mb-12 tracking-[-0.02em] text-gray-900 flex items-center gap-4 after:content-[''] after:h-px after:flex-1 after:bg-gray-200 group">
+                        <a href="#partnerships" className="no-underline text-gray-900 hover:text-accent transition-colors">
+                            {dict.partnerships.title}
+                        </a>
+                    </h2>
 
                     <div className="mb-12">
                         <a href="mailto:timqian@t9t.io" className="text-lg text-gray-900 hover:text-accent transition-colors no-underline font-medium">
@@ -146,10 +158,19 @@ export default function HomeContent({ lang }) {
                     </ul>
                 </section>
 
-                <footer className="mt-32 py-16 text-center border-t border-gray-200">
-                    <a href="https://github.com/timqian" target="_blank" rel="noopener noreferrer" className="text-gray-500 no-underline font-mono text-sm transition-colors duration-200 hover:text-gray-900">
-                        by @timqian
-                    </a>
+                <footer className="mt-32 py-16 border-t border-gray-200">
+                    <div className="flex justify-between items-center">
+                        <a href="https://github.com/timqian" target="_blank" rel="noopener noreferrer" className="text-gray-500 no-underline font-mono text-sm transition-colors duration-200 hover:text-gray-900">
+                            by @timqian
+                        </a>
+                        <a href={`/blog/${lang}/rss.xml`} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-accent transition-colors duration-200" aria-label="RSS Feed">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M4 11a9 9 0 0 1 9 9"></path>
+                                <path d="M4 4a16 16 0 0 1 16 16"></path>
+                                <circle cx="5" cy="19" r="1"></circle>
+                            </svg>
+                        </a>
+                    </div>
                 </footer>
             </div>
         </>
