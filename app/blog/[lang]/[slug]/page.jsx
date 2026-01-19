@@ -62,6 +62,9 @@ export default async function BlogPost({ params }) {
                 <div className="prose prose-lg prose-gray mx-auto">
                     <MDXRemote source={post.content} />
                 </div>
+                
+                <Giscus lang={lang} />
+                
                 <div className="mt-20 pt-10 border-t border-gray-200 flex justify-between items-center">
                     <Link href={`/blog/${lang}`} className="text-accent hover:underline font-mono text-sm">
                         ← {lang === 'zh' ? '返回列表' : 'Back to List'}
@@ -74,7 +77,7 @@ export default async function BlogPost({ params }) {
                         </svg>
                     </a>
                 </div>
-                <Giscus lang={lang} />
+
             </article>
         </>
     )
