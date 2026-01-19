@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import Navbar from './navbar'
 import GitHubButton from 'react-github-btn'
@@ -7,6 +8,7 @@ import { dictionary } from '../lib/dictionary'
 
 export default function HomeContent({ lang }) {
     const dict = dictionary[lang]
+    const [showWechatModal, setShowWechatModal] = useState(false)
 
     const formatPartners = (text) => {
         if (!text) return null
@@ -33,6 +35,19 @@ export default function HomeContent({ lang }) {
         <>
             <Navbar lang={lang} dict={dict} />
 
+            {/* WeChat Modal */}
+            {showWechatModal && (
+                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" onClick={() => setShowWechatModal(false)}>
+                    <div className="bg-white rounded-2xl p-8 max-w-sm mx-4 text-center" onClick={e => e.stopPropagation()}>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-4">{dict.hero.wechatTitle}</h3>
+                        <p className="text-gray-600 mb-6">{dict.hero.wechatDesc}</p>
+                        <button onClick={() => setShowWechatModal(false)} className="px-6 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-black transition-colors">
+                            关闭
+                        </button>
+                    </div>
+                </div>
+            )}
+
             <div className="max-w-[1200px] w-full mx-auto px-8 pb-16 pt-40">
                 <header className="text-center mb-32 relative block">
                     <div>
@@ -44,9 +59,15 @@ export default function HomeContent({ lang }) {
                             <Link href={`/blog/${lang}`} className="px-5 py-2.5 bg-transparent text-gray-900 no-underline border border-gray-200 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer font-sans hover:bg-gray-50 hover:border-gray-500 hover:-translate-y-px">
                                 {dict.nav.blog}
                             </Link>
-                            <a href="#" className="px-5 py-2.5 bg-gray-900 text-white no-underline border border-gray-900 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer font-sans hover:bg-black hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:-translate-y-px">
-                                {dict.hero.join}
-                            </a>
+                            {lang === 'en' ? (
+                                <a href={dict.hero.discordLink} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 bg-gray-900 text-white no-underline border border-gray-900 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer font-sans hover:bg-black hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:-translate-y-px">
+                                    {dict.hero.join}
+                                </a>
+                            ) : (
+                                <button onClick={() => setShowWechatModal(true)} className="px-5 py-2.5 bg-gray-900 text-white no-underline border border-gray-900 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer font-sans hover:bg-black hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:-translate-y-px">
+                                    {dict.hero.join}
+                                </button>
+                            )}
                         </div>
                     </div>
                 </header>
@@ -82,7 +103,7 @@ export default function HomeContent({ lang }) {
                                             <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-gray-900 tracking-[-0.01em] hover:text-accent transition-colors no-underline block mb-1">
                                                 {item.name}
                                             </a>
-                                            
+
                                         </div>
                                         {item.repo && (
                                             <div className="flex-shrink-0">
