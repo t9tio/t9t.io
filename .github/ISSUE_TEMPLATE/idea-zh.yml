@@ -1,0 +1,110 @@
+name: 提交想法 (中文)
+description: 提交你的产品想法
+title: "[想法]: "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 1. 关于你 (About You)
+
+  - type: textarea
+    id: who-are-you
+    attributes:
+      label: 你是谁？
+      description: 职业背景、擅长领域或社交媒体链接
+    validations:
+      required: true
+
+  - type: textarea
+    id: your-story
+    attributes:
+      label: 你的故事
+      description: 请用一句话描述你是在什么情况下发现这个问题的？
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 2. 痛点深度 (The Pain Point)
+
+  - type: textarea
+    id: pain-point
+    attributes:
+      label: 痛点描述
+      description: 这个问题如果不解决，对你或你的同行造成了什么具体的损失？(如：每天浪费 2 小时、错失客户、心情焦虑等)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-solution
+    attributes:
+      label: 目前的"笨办法"
+      description: 在没有这个 App 之前，你是如何应付这个问题的？(如果没有尝试过任何办法，说明痛点可能不够深)
+    validations:
+      required: true
+
+  - type: textarea
+    id: who-else
+    attributes:
+      label: 谁是另外 100 个人？
+      description: 请描述除了你之外，还有谁会遇到同样的问题？他们通常在哪里聚集？
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 3. 产品定义 (The Product)
+
+  - type: textarea
+    id: mvp-features
+    attributes:
+      label: 核心功能 (MVP)
+      description: 如果第一版只能有 3 个功能，它们分别是什么？
+      placeholder: |
+        1. [功能一]
+        2. [功能二]
+        3. [功能三]
+    validations:
+      required: true
+
+  - type: textarea
+    id: competitors
+    attributes:
+      label: 对标产品
+      description: 市场上已有的类似产品是什么？为什么它们对你来说不好用？(太贵、太复杂、还是没解决核心问题？)
+    validations:
+      required: false
+
+  - type: textarea
+    id: success-definition
+    attributes:
+      label: 成功定义
+      description: 对你来说，App 做到什么程度你就会愿意把它推荐给身边的朋友？
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 4. 承诺与合作 (Co-founder Spirit)
+
+  - type: textarea
+    id: distribution
+    attributes:
+      label: 运营分发
+      description: 产品上线后，你愿意负责找到前 100 个用户并收集反馈吗？
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: collaboration-mode
+    attributes:
+      label: 合作模式意向
+      description: 请选择你倾向的合作模式
+      options:
+        - label: "**纯公益：** 解决问题，项目完全开源/免费。"
+        - label: "**商业化尝试：** 作为 Co-founder 共同运营，收益分成。"
+        - label: "**付费插队：** 支付开发费用，要求极速交付且深度定制。"
