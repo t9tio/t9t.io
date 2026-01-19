@@ -18,8 +18,8 @@ export default function Giscus({ lang = 'zh-CN' }) {
     script.setAttribute('data-strict', '0')
     script.setAttribute('data-reactions-enabled', '1')
     script.setAttribute('data-emit-metadata', '0')
-    script.setAttribute('data-input-position', 'top')
-    script.setAttribute('data-theme', 'noborder_light')
+    script.setAttribute('data-input-position', 'bottom')
+    script.setAttribute('data-theme', 'light')
     script.setAttribute('data-lang', lang === 'zh' ? 'zh-CN' : 'en')
     script.setAttribute('data-loading', 'lazy')
     script.crossOrigin = 'anonymous'
