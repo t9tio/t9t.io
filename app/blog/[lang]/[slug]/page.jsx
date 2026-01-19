@@ -3,6 +3,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Navbar from '../../../../components/navbar'
+import Giscus from '../../../../components/giscus'
 import { dictionary } from '../../../../lib/dictionary'
 
 export async function generateStaticParams() {
@@ -73,6 +74,7 @@ export default async function BlogPost({ params }) {
                         </svg>
                     </a>
                 </div>
+                <Giscus lang={lang} />
             </article>
         </>
     )
