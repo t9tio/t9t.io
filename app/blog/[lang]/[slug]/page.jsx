@@ -33,10 +33,34 @@ export async function generateMetadata({ params }) {
 
     const metadata = {
         title: post.title,
+        metadataBase: new URL('https://t9t.io'),
+        openGraph: {
+            title: post.title,
+            url: `https://t9t.io/blog/${lang}/${slug}`,
+            siteName: 't9t.io',
+            images: [
+                {
+                    url: '/og-image.png',
+                    width: 1200,
+                    height: 630,
+                    alt: post.title,
+                },
+            ],
+            locale: lang === 'zh' ? 'zh_CN' : 'en_US',
+            type: 'article',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.title,
+            images: ['/og-image.png'],
+            creator: '@tim_qian',
+        },
     }
 
     if (post.description) {
         metadata.description = post.description
+        metadata.openGraph.description = post.description
+        metadata.twitter.description = post.description
     }
 
     return metadata

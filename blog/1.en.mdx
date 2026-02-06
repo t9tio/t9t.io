@@ -1,0 +1,54 @@
+---
+title: To Solve My Snoring Problem, I Built an iOS App - Snoreman
+date: '2026-02-06'
+---
+
+My roommate told me I snore at night—and sometimes I even wake her up. I also often wake up with a dry throat and feel like I didn’t sleep well.
+
+After some research, I learned that snoring usually comes from a few common causes:
+
+1. **Obesity and neck fat accumulation**: Extra tissue can narrow the airway. When your muscles relax during sleep, the airway can become even tighter.
+  What can help:
+    - Sustainable weight loss: Even losing **5%–10%** of body weight can reduce airway pressure.
+    - More exercise: Better muscle tone can help prevent tissues from collapsing too much at night.
+
+2. **Sleeping on your back**: Gravity pulls the tongue and soft palate backward, partially blocking the airway—like closing a door halfway—making airflow noisy.
+  What can help:
+    - Side sleeping: If you keep rolling onto your back, sewing a tennis ball onto the back of your pajamas is old-school but effective.
+    - Elevate your head: Raising your pillow by **10–15 cm** can help keep the airway more open.
+
+3. **Nasal or throat issues**: For example, allergic rhinitis can increase resistance and trigger mouth breathing.
+  What can help:
+    - Targeted treatment: Nasal irrigation, or anti-allergy sprays under medical guidance.
+    - Quit smoking and limit alcohol: Alcohol relaxes airway muscles; smoking irritates and inflames the airway.
+    - Devices (for severe cases): Talk to a doctor about CPAP or an anti-snoring mouthguard.
+
+For me, #2 and #3 are the likely culprits. I’m planning to try side sleeping, nasal irrigation, and some oral/throat muscle exercises to see if I can fix it.
+
+The frustrating part is: **while you’re asleep, you have no idea whether any of this is working.** The only reliable way is to record overnight audio and review it the next day.
+
+There are existing options—recording yourself and writing code to analyze it—but that’s too much hassle. I looked for ready-made apps:
+
+- **SnowLab** can record and analyze snoring, but it costs about **75 CNY/month**, which felt pricey for a single function.
+- I tried a free app called **“Little Sleep”**, but it didn’t record anything that night. I couldn’t tell whether I truly didn’t snore or the app failed—and there was no saved audio to verify.
+
+That pain point felt worth solving:
+
+1. Many sleep apps bundle too many features, and it takes forever to find the one thing you need.
+2. Apps focused on sleep audio monitoring often rely on subscriptions. But this is a **purely local** workflow. A one-time purchase (e.g., **$1.99**) feels much more reasonable—especially for people who were put off by a subscription that costs tens of yuan per month.
+
+So I built my first iOS app:
+
+**Snoreman**
+
+![](/snoreman_en.png)
+
+What it does:
+
+- **Simple**: Open the app, tap one button, and start recording + analysis.
+- **Flexible review**: Tap a recording, adjust the dB threshold, jump to suspected snoring segments, and listen immediately.
+- **Keeps your data**: Original recordings are preserved and can be exported for analysis elsewhere.
+- **Efficient storage**: An 8-hour recording only takes a few dozen MB.
+- **Resilient**: If recording is interrupted, the audio captured so far is still saved properly.
+
+If you want to confirm whether you’re snoring—or talking in your sleep—feel free to try Snoreman.
