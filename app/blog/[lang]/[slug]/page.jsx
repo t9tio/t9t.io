@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import Navbar from '../../../../components/navbar'
 import Giscus from '../../../../components/giscus'
 import { dictionary } from '../../../../lib/dictionary'
+import remarkGfm from 'remark-gfm'
 
 export async function generateStaticParams() {
     const postsEn = getAllPosts('en', ['slug'])
@@ -65,6 +66,11 @@ export async function generateMetadata({ params }) {
 
     return metadata
 }
+const mdxOptions = {
+    mdxOptions: {
+        remarkPlugins: [remarkGfm],
+    },
+}
 
 export default async function BlogPost({ params }) {
     const { lang, slug } = await params
@@ -84,7 +90,7 @@ export default async function BlogPost({ params }) {
                     <time className="text-gray-500 font-mono text-sm">{post.date}</time>
                 </header>
                 <div className="prose prose-lg prose-gray mx-auto">
-                    <MDXRemote source={post.content} />
+                    <MDXRemote source={post.content} options={mdxOptions} />
                 </div>
                 
                 <Giscus lang={lang} />
