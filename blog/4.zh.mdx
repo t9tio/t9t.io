@@ -1,0 +1,34 @@
+---
+title: Chart.xkcd 2.0
+date: '2026-06-08'
+---
+![chart.xkcd examples](/chart.xkcd.gif)
+
+[Chart.xkcd](https://github.com/timqian/chart.xkcd) 是我在 2019 年做的一个手绘风格的图表库，主要灵感来自于 xkcd 漫画。
+
+当时主要是为 [star-history](https://github.com/star-history/star-history) 做的，在这类场景，人们查看图表的时候，关注的不是具体数值，而是整体趋势。
+我需要一种模糊具体数值，主要关注趋势的图表库，于是就做了这个工具。
+
+一转眼，已经是 7 年前的事情了，虽然更新不勤快，但还是看到有挺多人在用的:
+- [GitHub](https://github.com/timqian/chart.xkcd) 上 7 千多个 star
+- 有 [100 多个项目](https://github.com/timqian/chart.xkcd/network/dependents) 依赖这个库
+- [jsdelivr](https://www.jsdelivr.com/package/npm/chart.xkcd) 上每月也有 2 万多次调用。
+
+最近做一个新项目时我需要用到这个图表库，发现有些依赖有安全漏洞，新的图表也没有 release. 于是花了几天时间和 claude code 一起更新了一下 chart.xkcd。
+
+## 2.0 的新功能
+
+1. 修复安全漏洞，升级依赖
+2. 新增 [Combined chart](https://timqian.com/chart.xkcd/#combined_chart)
+  <img src="/chart.xkcd_combined_chart.png" alt="Combined chart" style={{ display: 'block', margin: '0 auto', width: '60%' }} />
+3. 减小 npm 安装包体积
+4. 优化 [example 页面](https://timqian.com/chart.xkcd/example.html)，一个页面查看所有图表
+
+
+## 链接
+
+- [GitHub](https://github.com/timqian/chart.xkcd)
+- [Example 页面](https://timqian.com/chart.xkcd/example.html)
+- [文档](https://timqian.com/chart.xkcd)
+
+欢迎使用！
