@@ -1,0 +1,30 @@
+---
+title: With AI's help, I tracked how programmer salaries changed over 10 years
+date: '2026-06-25'
+---
+
+About 8 years ago, I built [a tool](https://github.com/hacker-job/hacker-job/tree/master) that downloads all the job postings people share on [Hackernews](https://news.ycombinator.com/news) and provides keyword statistics. We can use this tool to get a sense of the trends behind some keywords in the tech industry. For example, the chart of the three keywords below shows the shift in popular frontend frameworks:
+
+![Frontend framework popularity trends](/hacker-job_1.png)
+
+I was actually also curious about salary trends, but since different employers describe salaries in wildly different ways, it's hard to extract the salary range of a given job posting with simple word-frequency counts or regular expressions. The arrival of LLMs in recent years made this easy: I just feed the job posting to an AI (Gemma 4 12B for this analysis) and let it tell me the salary range for that posting (the same goes for other information that's hard to extract programmatically).
+
+So, together with Claude, I wrote a script to download all the job postings on HN from the past 10+ years and feed them one by one to Gemma 4. After 3.02 days, we got the chart below:
+
+![10 years of programmer salary changes](/hacker-job_2.png)
+
+Over 10 years, the average salary on HN went from around 120K to about 180K — roughly a 30% increase.
+
+## Some other interesting findings
+
+- A sluggish overall job market? Whether or not it's due to the impact of AI, the number of job postings has lingered at low levels in recent years.
+![Job market hit by major events](/hacker-job_3.jpg)
+
+- The share of AI-related jobs keeps growing, in stark contrast to the decline of Java. If you're just getting started with a programming language, think twice before picking Java 😅
+![The rise of AI-related jobs and the decline of Java](/hacker-job_4.png)
+
+## One more thing
+
+I also built a website: [hacker-job.com](https://hacker-job.com/trends), where you can explore all the charts above yourself. For instance, are more and more companies supporting "remote"? (In fact, the data shows the share of remote-friendly jobs has been declining recently.)
+
+This website will also keep adding new "hacker jobs," so if you're job hunting, take a look there too.
